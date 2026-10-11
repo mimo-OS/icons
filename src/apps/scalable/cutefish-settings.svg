@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="124%" height="128%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="16" stdDeviation="16" flood-color="#1e2638" flood-opacity="0.28"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0f1522" flood-opacity="0.18"/>
+    </filter>
+
+    <!-- Silver Frosted Background Gradient -->
+    <linearGradient id="squircleBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="45%" stop-color="#F1F4F9"/>
+      <stop offset="100%" stop-color="#CBD3E1"/>
+    </linearGradient>
+
+    <!-- Metallic Gear Outer Body -->
+    <linearGradient id="gearBody" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#94A0B2"/>
+      <stop offset="50%" stop-color="#6E7B91"/>
+      <stop offset="100%" stop-color="#4F5A6D"/>
+    </linearGradient>
+
+    <!-- Inner Dark Slate Hub -->
+    <linearGradient id="innerHub" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2D3544"/>
+      <stop offset="100%" stop-color="#1B212D"/>
+    </linearGradient>
+
+    <!-- Accent Blue Center Ring -->
+    <linearGradient id="blueAccent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#007AFF"/>
+      <stop offset="100%" stop-color="#0051C7"/>
+    </linearGradient>
+
+    <clipPath id="squircleClip">
+      <rect x="24" y="24" width="464" height="464" rx="136" ry="136"/>
+    </clipPath>
+  </defs>
+
+  <!-- Shadow & Base Squircle (Smooth 136px Radius) -->
+  <rect x="24" y="24" width="464" height="464" rx="136" ry="136" fill="#CBD3E1" filter="url(#shadow)"/>
+
+  <!-- Clipped Background -->
+  <g clip-path="url(#squircleClip)">
+    <rect x="24" y="24" width="464" height="464" fill="url(#squircleBg)"/>
+
+    <!-- Subtle Diagonal Background Texture Lines -->
+    <path d="M 24 160 L 360 488 M 24 280 L 240 488 M 160 24 L 488 352" stroke="#FFFFFF" stroke-width="2" opacity="0.4"/>
+
+    <!-- Central Precision Gear -->
+    <g transform="translate(256, 256)">
+      <!-- 8 Gear Teeth -->
+      <path fill="url(#gearBody)" d="
+        M -24 -152 L 24 -152 L 28 -108 C 50 -100 70 -88 88 -72 L 130 -92 L 152 -50 L 118 -20 C 122 3 122 27 118 50 L 152 80 L 130 122 L 88 102 C 70 118 50 130 28 138 L 24 182 L -24 182 L -28 138 C -50 130 -70 118 -88 102 L -130 122 L -152 80 L -118 50 C -122 27 -122 3 -118 -20 L -152 -50 L -130 -92 L -88 -72 C -70 -88 -50 -100 -28 -108 Z
+      "/>
+
+      <!-- Outer Gear Circle Ring -->
+      <circle cx="0" cy="0" r="112" fill="url(#gearBody)"/>
+
+      <!-- Inner Dark Hub -->
+      <circle cx="0" cy="0" r="76" fill="url(#innerHub)"/>
+
+      <!-- Blue Accent Center Core -->
+      <circle cx="0" cy="0" r="38" fill="url(#blueAccent)"/>
+      <circle cx="0" cy="0" r="22" fill="#FFFFFF"/>
+    </g>
+
+    <!-- Top Gloss Highlight -->
+    <rect x="24" y="24" width="464" height="232" fill="#FFFFFF" opacity="0.12"/>
+  </g>
+
+  <!-- Specular Glass Rim -->
+  <rect x="24" y="24" width="464" height="464" rx="136" ry="136" fill="none" stroke="#FFFFFF" stroke-width="3" opacity="0.6"/>
+</svg>

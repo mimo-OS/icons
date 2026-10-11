@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Soft Multi-Layer Ambient Shadow -->
+    <filter id="shadow" x="-15%" y="-15%" width="130%" height="135%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="18" stdDeviation="16" flood-color="#001438" flood-opacity="0.32"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000a20" flood-opacity="0.20"/>
+    </filter>
+
+    <!-- Front Flap / Layer Shadow -->
+    <filter id="flapShadow" x="-20%" y="-20%" width="140%" height="150%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#002166" flood-opacity="0.35"/>
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000e33" flood-opacity="0.20"/>
+    </filter>
+
+    <!-- Document Card Drop Shadow -->
+    <filter id="cardShadow" x="-20%" y="-20%" width="140%" height="140%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#001848" flood-opacity="0.25"/>
+    </filter>
+
+    <!-- HarmonyOS Royal Blue Canvas Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#287EFF"/>
+      <stop offset="50%" stop-color="#1460F0"/>
+      <stop offset="100%" stop-color="#093DB3"/>
+    </linearGradient>
+
+    <!-- Back Folder Gradient -->
+    <linearGradient id="backFolderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1259D9"/>
+      <stop offset="100%" stop-color="#073399"/>
+    </linearGradient>
+
+    <!-- Front Folder Pocket Gradient -->
+    <linearGradient id="frontFlapGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#47A3FF"/>
+      <stop offset="50%" stop-color="#217BFF"/>
+      <stop offset="100%" stop-color="#0D53E5"/>
+    </linearGradient>
+
+    <!-- Top Gloss Sheen -->
+    <linearGradient id="sheenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.0"/>
+    </linearGradient>
+
+    <!-- Squircle Clip -->
+    <clipPath id="squircleClip">
+      <rect x="32" y="32" width="448" height="448" rx="112" ry="112"/>
+    </clipPath>
+  </defs>
+
+  <!-- Ambient Shadow Base -->
+  <rect x="32" y="32" width="448" height="448" rx="112" ry="112" fill="#093DB3" filter="url(#shadow)"/>
+
+  <!-- Main Squircle Container -->
+  <g clip-path="url(#squircleClip)">
+    <!-- Canvas Background -->
+    <rect x="32" y="32" width="448" height="448" fill="url(#bgGrad)"/>
+
+    <!-- Subtle Top Ambient Glass Sheen -->
+    <rect x="32" y="32" width="448" height="224" fill="url(#sheenGrad)"/>
+
+    <!-- HarmonyOS File Folder System -->
+    <!-- 1. Back Folder Body with Tab -->
+    <path d="M 104 150
+             C 104 138, 114 128, 126 128
+             L 210 128
+             C 222 128, 232 134, 238 144
+             L 254 168
+             C 258 174, 265 178, 272 178
+             L 386 178
+             C 398 178, 408 188, 408 200
+             L 408 376
+             C 408 388, 398 398, 386 398
+             L 126 398
+             C 114 398, 104 388, 104 376
+             Z"
+          fill="url(#backFolderGrad)"/>
+
+    <!-- 2. Back Document Card (Slightly Angled / Offset) -->
+    <rect x="156" y="152" width="200" height="210" rx="16" ry="16"
+          fill="#EBF3FF" opacity="0.65"
+          transform="rotate(-5 256 257)"/>
+
+    <!-- 3. Primary White Document Sheet (Peeking out) -->
+    <g filter="url(#cardShadow)">
+      <rect x="152" y="158" width="208" height="210" rx="16" ry="16" fill="#FFFFFF"/>
+
+      <!-- Document Header / File Preview Content Lines -->
+      <rect x="176" y="184" width="76" height="12" rx="6" fill="#217BFF"/>
+      <rect x="176" y="208" width="136" height="10" rx="5" fill="#E1E9F5"/>
+      <rect x="176" y="228" width="112" height="10" rx="5" fill="#E1E9F5"/>
+
+      <!-- Document Grid Icons / File Thumbnails -->
+      <rect x="176" y="254" width="42" height="42" rx="10" fill="#EBF3FF"/>
+      <circle cx="197" cy="275" r="10" fill="#217BFF" opacity="0.85"/>
+
+      <rect x="228" y="254" width="42" height="42" rx="10" fill="#FFF0ED"/>
+      <rect x="241" y="267" width="16" height="16" rx="4" fill="#FF5252" opacity="0.85"/>
+
+      <rect x="280" y="254" width="42" height="42" rx="10" fill="#E6FAF5"/>
+      <path d="M 295 275 L 301 281 L 309 269" fill="none" stroke="#00C896" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+
+    <!-- 4. Front Folder Pocket / Front Flap -->
+    <path d="M 96 236
+             C 96 222, 108 212, 122 212
+             L 214 212
+             C 226 212, 237 218, 243 228
+             L 257 250
+             C 262 257, 270 262, 279 262
+             L 390 262
+             C 404 262, 416 274, 416 288
+             L 416 380
+             C 416 395, 404 406, 390 406
+             L 122 406
+             C 108 406, 96 395, 96 380
+             Z"
+          fill="url(#frontFlapGrad)"
+          filter="url(#flapShadow)"/>
+
+    <!-- Front Pocket Inner Specular Highlight Rim -->
+    <path d="M 98 238
+             C 98 226, 108 214, 122 214
+             L 214 214
+             C 225 214, 235 220, 241 229
+             L 255 251
+             C 260 259, 269 264, 279 264
+             L 390 264
+             C 402 264, 414 275, 414 288"
+          fill="none"
+          stroke="#FFFFFF"
+          stroke-width="2.5"
+          opacity="0.45"
+          stroke-linecap="round"/>
+  </g>
+
+  <!-- Specular Outer Glass Boundary Highlight Rim -->
+  <rect x="32" y="32" width="448" height="448" rx="112" ry="112" fill="none" stroke="#FFFFFF" stroke-width="2.5" opacity="0.40"/>
+</svg>

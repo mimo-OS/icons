@@ -1,1 +1,69 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64"><defs><linearGradient id="b" x1="170.46" x2="289.66" y1="713.63" y2="713.63" gradientTransform="translate(-57.076 -241.47)scale(.38718)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#3e3e3e"/><stop offset=".182" stop-color="#525252"/><stop offset=".482" stop-color="#454545"/><stop offset=".744" stop-color="#454545"/><stop offset="1" stop-color="#737373"/></linearGradient><linearGradient id="a" x1="170.46" x2="289.66" y1="704.73" y2="704.73" gradientTransform="translate(-57.076 -241.47)scale(.38718)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6b6b6b"/><stop offset=".254" stop-color="#404040"/><stop offset=".433" stop-color="#434343"/><stop offset=".744" stop-color="#595959"/><stop offset="1" stop-color="#3d3d3d"/></linearGradient><linearGradient id="e" x1="53.432" x2="47.832" y1="42.43" y2="41.736" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff" stop-opacity=".15"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient><clipPath id="c"/><filter id="d" width="1.48" height="1.064" x="-.24" y="-.032" color-interpolation-filters="sRGB"><feGaussianBlur stdDeviation=".506"/></filter></defs><path fill="url(#a)" d="M32.001 3C19.257 3 8.925 5.583 8.925 8.77l.04.33c.688 3.032 10.737 5.438 23.036 5.438s22.352-2.407 23.036-5.439l.04-.33C55.077 5.583 44.745 3 32 3z" opacity=".542"/><path fill="url(#b)" d="m8.924 8.768 5.525 44.978c0 4.16 7.869 7.533 17.575 7.533 9.707 0 17.576-3.372 17.576-7.533l5.476-44.978c-.001 3.186-10.332 5.769-23.076 5.769S8.925 11.954 8.924 8.768" opacity=".915"/><path fill="#9d9da9" fill-rule="evenodd" d="M44.938 285.23c3.496-11.623-4.516-41.02-4.159-37.78z" clip-path="url(#c)" filter="url(#d)" opacity=".064" transform="translate(-52.098 -356.18)scale(1.4634)"/><path fill="url(#e)" d="m8.924 8.768 5.525 44.978c0 4.16 7.869 7.533 17.575 7.533 9.707 0 17.576-3.372 17.576-7.533l5.476-44.978c-.001 3.186-10.332 5.769-23.076 5.769S8.925 11.954 8.924 8.768"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="125%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="16" stdDeviation="16" flood-color="#000000" flood-opacity="0.3"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.2"/>
+    </filter>
+    <linearGradient id="basketRim" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#b0b8c6"/>
+      <stop offset="30%" stop-color="#ffffff"/>
+      <stop offset="70%" stop-color="#cbd2de"/>
+      <stop offset="100%" stop-color="#8e97a6"/>
+    </linearGradient>
+    <linearGradient id="basketInner" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4a5260"/>
+      <stop offset="100%" stop-color="#282e38"/>
+    </linearGradient>
+    <linearGradient id="basketBody" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7a8494" stop-opacity="0.75"/>
+      <stop offset="25%" stop-color="#c8d0de" stop-opacity="0.6"/>
+      <stop offset="60%" stop-color="#ffffff" stop-opacity="0.7"/>
+      <stop offset="85%" stop-color="#b4becd" stop-opacity="0.65"/>
+      <stop offset="100%" stop-color="#5a6474" stop-opacity="0.8"/>
+    </linearGradient>
+    <linearGradient id="baseRim" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#707a8a"/>
+      <stop offset="50%" stop-color="#d0d6e2"/>
+      <stop offset="100%" stop-color="#606a7a"/>
+    </linearGradient>
+  </defs>
+
+  <g filter="url(#shadow)">
+    <!-- Inner Dark Cavity -->
+    <ellipse cx="256" cy="115" rx="175" ry="46" fill="url(#basketInner)"/>
+
+    <!-- Basket Body Shell (Translucent Metallic Frosted Mesh) -->
+    <path d="M 81,115 
+             C 81,140 159,161 256,161 
+             C 353,161 431,140 431,115 
+             L 385,420 
+             C 385,446 327,466 256,466 
+             C 185,466 127,446 127,420 
+             Z" fill="url(#basketBody)"/>
+
+    <!-- Vertical Ribs / Mesh Lines -->
+    <g stroke="#ffffff" opacity="0.4" stroke-width="2.5">
+      <path d="M 120,132 L 152,434"/>
+      <path d="M 160,145 L 186,446"/>
+      <path d="M 206,154 L 222,453"/>
+      <path d="M 256,157 L 256,455"/>
+      <path d="M 306,154 L 290,453"/>
+      <path d="M 352,145 L 326,446"/>
+      <path d="M 392,132 L 360,434"/>
+    </g>
+
+    <!-- Horizontal Rings on Basket -->
+    <ellipse cx="256" cy="220" rx="160" ry="38" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.3"/>
+    <ellipse cx="256" cy="320" rx="146" ry="34" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.3"/>
+
+    <!-- Bottom Rim -->
+    <ellipse cx="256" cy="420" rx="128" ry="30" fill="url(#baseRim)"/>
+    <ellipse cx="256" cy="420" rx="128" ry="30" fill="none" stroke="#4a5260" stroke-width="2"/>
+
+    <!-- Top Metallic Rim -->
+    <ellipse cx="256" cy="115" rx="175" ry="46" fill="none" stroke="url(#basketRim)" stroke-width="14"/>
+    <ellipse cx="256" cy="115" rx="175" ry="46" fill="none" stroke="#4a5260" stroke-width="2"/>
+    <!-- Top Rim Specular Glint -->
+    <path d="M 140,110 C 180,85 240,75 290,75" fill="none" stroke="#ffffff" stroke-width="4" opacity="0.75" stroke-linecap="round"/>
+  </g>
+</svg>

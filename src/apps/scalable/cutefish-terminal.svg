@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <filter id="shadow" x="-8%" y="-8%" width="120%" height="124%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#000000" flood-opacity="0.5"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+    <linearGradient id="termBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3a3a3c"/>
+      <stop offset="25%" stop-color="#242426"/>
+      <stop offset="100%" stop-color="#141416"/>
+    </linearGradient>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#48484a"/>
+      <stop offset="100%" stop-color="#323234"/>
+    </linearGradient>
+    <linearGradient id="cursorGlow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#30d158"/>
+      <stop offset="100%" stop-color="#248a3d"/>
+    </linearGradient>
+    <linearGradient id="rimLight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.05"/>
+    </linearGradient>
+    <clipPath id="squircleClip">
+      <rect x="24" y="24" width="464" height="464" rx="108" ry="108"/>
+    </clipPath>
+  </defs>
+
+  <!-- Shadow Base -->
+  <rect x="24" y="24" width="464" height="464" rx="108" ry="108" filter="url(#shadow)" fill="#141416"/>
+
+  <g clip-path="url(#squircleClip)">
+    <!-- Terminal Background -->
+    <rect x="24" y="24" width="464" height="464" fill="url(#termBg)"/>
+
+    <!-- Top Window Titlebar -->
+    <rect x="24" y="24" width="464" height="68" fill="url(#headerGrad)"/>
+    <line x1="24" y1="92" x2="488" y2="92" stroke="#1c1c1e" stroke-width="2"/>
+
+    <!-- Traffic Lights on Titlebar -->
+    <circle cx="72" cy="58" r="9" fill="#ff5f56" stroke="#e0443e" stroke-width="1.5"/>
+    <circle cx="102" cy="58" r="9" fill="#ffbd2e" stroke="#dea123" stroke-width="1.5"/>
+    <circle cx="132" cy="58" r="9" fill="#27c93f" stroke="#1aab29" stroke-width="1.5"/>
+
+    <!-- Prompt Chevron '>' -->
+    <path d="M 100,190 L 210,270 L 100,350 L 126,378 L 264,270 L 126,162 Z" 
+          fill="#f2f2f7" filter="drop-shadow(0 4px 6px rgba(0, 0, 0, 0.4))"/>
+
+    <!-- Prompt Cursor '_' -->
+    <rect x="286" y="322" width="130" height="28" rx="6" fill="#30d158" filter="drop-shadow(0 0 10px rgba(48, 209, 88, 0.5))"/>
+
+    <!-- Rim Light -->
+    <rect x="24" y="24" width="464" height="464" rx="108" ry="108" fill="none" stroke="url(#rimLight)" stroke-width="3"/>
+  </g>
+</svg>

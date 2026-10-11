@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Background Gradient (Silver Gray) -->
+    <linearGradient id="squircleBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="40%" stop-color="#ebedf2"/>
+      <stop offset="100%" stop-color="#c8ceda"/>
+    </linearGradient>
+
+    <!-- Metallic Gear Gradient -->
+    <linearGradient id="gearMetal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#98a2b2"/>
+      <stop offset="30%" stop-color="#727c8d"/>
+      <stop offset="70%" stop-color="#8c96a8"/>
+      <stop offset="100%" stop-color="#646f80"/>
+    </linearGradient>
+
+    <!-- Metallic Hub Gradient -->
+    <linearGradient id="innerHub" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3c4452"/>
+      <stop offset="100%" stop-color="#586274"/>
+    </linearGradient>
+
+    <!-- Specular Rim Highlight -->
+    <linearGradient id="rimLight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.15"/>
+    </linearGradient>
+
+    <!-- Full Canvas Squircle Clip -->
+    <clipPath id="squircleClip">
+      <rect x="0" y="0" width="512" height="512" rx="115" ry="115"/>
+    </clipPath>
+  </defs>
+
+  <!-- Base Squircle -->
+  <rect x="0" y="0" width="512" height="512" rx="115" ry="115" fill="#c8ceda"/>
+
+  <g clip-path="url(#squircleClip)">
+    <rect x="0" y="0" width="512" height="512" fill="url(#squircleBg)"/>
+
+    <!-- The Metallic Gear (10 Teeth) -->
+    <g transform="translate(256, 256)">
+      <path d="
+        M 0,-185 L 28,-185 L 36,-153 C 54,-148 70,-139 84,-128 L 114,-143 L 135,-122 L 120,-92 C 131,-78 140,-62 145,-44 L 177,-36 L 177,0 L 177,36 L 145,44 C 140,62 131,78 120,92 L 135,122 L 114,143 L 84,128 C 70,139 54,148 36,153 L 28,185 L -28,185 L -36,153 C -54,148 -70,139 -84,128 L -114,143 L -135,122 L -120,92 C -131,-78 -140,-62 -145,-44 L -177,36 L -177,-36 L -145,-44 C -140,-62 -131,-78 -120,-92 L -135,-122 L -114,-143 L -84,-128 C -70,-139 -54,-148 -36,-153 L -28,-185 Z
+      " fill="url(#gearMetal)" stroke="#48505e" stroke-width="2"/>
+
+      <!-- Outer Groove Ring -->
+      <circle cx="0" cy="0" r="136" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.4"/>
+      <circle cx="0" cy="0" r="134" fill="none" stroke="#323844" stroke-width="2" opacity="0.6"/>
+
+      <!-- Central Recessed Hub -->
+      <circle cx="0" cy="0" r="88" fill="url(#innerHub)" stroke="#1e222a" stroke-width="4"/>
+      <circle cx="0" cy="0" r="86" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.3"/>
+
+      <!-- Center Axle Hole -->
+      <circle cx="0" cy="0" r="58" fill="#141820" stroke="#0a0c10" stroke-width="3"/>
+      <circle cx="0" cy="0" r="56" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.25"/>
+    </g>
+
+    <!-- Outer Squircle Rim Light -->
+    <rect x="0" y="0" width="512" height="512" rx="115" ry="115" fill="none" stroke="url(#rimLight)" stroke-width="4"/>
+  </g>
+</svg>

@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <filter id="shadow" x="-8%" y="-8%" width="120%" height="124%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="16" stdDeviation="18" flood-color="#002550" flood-opacity="0.25"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#001530" flood-opacity="0.2"/>
+    </filter>
+    <linearGradient id="squircleBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#e8ecf2"/>
+    </linearGradient>
+    <radialGradient id="dialGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38a9ff"/>
+      <stop offset="60%" stop-color="#007aff"/>
+      <stop offset="100%" stop-color="#0051b3"/>
+    </radialGradient>
+    <linearGradient id="needleRed" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff453a"/>
+      <stop offset="100%" stop-color="#d70015"/>
+    </linearGradient>
+    <linearGradient id="needleWhite" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#d1d1d6"/>
+    </linearGradient>
+    <linearGradient id="rimLight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.1"/>
+    </linearGradient>
+    <clipPath id="squircleClip">
+      <rect x="24" y="24" width="464" height="464" rx="108" ry="108"/>
+    </clipPath>
+  </defs>
+
+  <!-- Shadow Base -->
+  <rect x="24" y="24" width="464" height="464" rx="108" ry="108" filter="url(#shadow)" fill="#d1d6e0"/>
+
+  <g clip-path="url(#squircleClip)">
+    <!-- Base Squircle -->
+    <rect x="24" y="24" width="464" height="464" fill="url(#squircleBg)"/>
+
+    <!-- Compass Outer Bezel Ring -->
+    <circle cx="256" cy="256" r="190" fill="#d2d6df" filter="drop-shadow(0 6px 10px rgba(0,0,0,0.18))"/>
+    <circle cx="256" cy="256" r="186" fill="#ffffff"/>
+    <circle cx="256" cy="256" r="182" fill="#c4c8d2"/>
+
+    <!-- Deep Blue Ocean Dial -->
+    <circle cx="256" cy="256" r="176" fill="url(#dialGrad)"/>
+
+    <!-- Compass Degree Tick Marks -->
+    <g transform="translate(256, 256)" stroke="#ffffff" opacity="0.75" stroke-linecap="round">
+      <!-- Major 12 ticks -->
+      <line x1="0" y1="-170" x2="0" y2="-152" stroke-width="4"/>
+      <line x1="0" y1="170" x2="0" y2="152" stroke-width="4"/>
+      <line x1="-170" y1="0" x2="-152" y2="0" stroke-width="4"/>
+      <line x1="170" y1="0" x2="152" y2="0" stroke-width="4"/>
+
+      <line x1="120" y1="-120" x2="108" y2="-108" stroke-width="3"/>
+      <line x1="-120" y1="-120" x2="-108" y2="-108" stroke-width="3"/>
+      <line x1="120" y1="120" x2="108" y2="108" stroke-width="3"/>
+      <line x1="-120" y1="120" x2="-108" y2="108" stroke-width="3"/>
+
+      <!-- Inner Compass Rosette lines -->
+      <circle cx="0" cy="0" r="140" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.3"/>
+      <circle cx="0" cy="0" r="85" fill="none" stroke="#ffffff" stroke-width="1" opacity="0.25"/>
+    </g>
+
+    <!-- Angled Compass Needle (Rotated ~48 degrees) -->
+    <g transform="translate(256, 256) rotate(48)" filter="drop-shadow(4 8 8 rgba(0, 0, 0, 0.4))">
+      <!-- North Red Diamond (Points UP) -->
+      <polygon points="0,-165 24,0 0,0" fill="url(#needleRed)"/>
+      <polygon points="0,-165 -24,0 0,0" fill="#ff6961"/>
+
+      <!-- South White Diamond (Points DOWN) -->
+      <polygon points="0,165 24,0 0,0" fill="url(#needleWhite)"/>
+      <polygon points="0,165 -24,0 0,0" fill="#ffffff"/>
+
+      <!-- Center Metallic Pivot -->
+      <circle cx="0" cy="0" r="14" fill="#a0a8b6" stroke="#4a5568" stroke-width="2"/>
+      <circle cx="0" cy="0" r="7" fill="#ffffff"/>
+    </g>
+
+    <!-- Outer Rim Light -->
+    <rect x="24" y="24" width="464" height="464" rx="108" ry="108" fill="none" stroke="url(#rimLight)" stroke-width="4"/>
+  </g>
+</svg>
