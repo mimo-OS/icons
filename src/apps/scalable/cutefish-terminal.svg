@@ -31,10 +31,10 @@
 
   <g clip-path="url(#squircleClip)">
     <!-- Terminal Background -->
-    <rect x="24" y="24" width="464" height="464" fill="url(#termBg)"/>
+    <rect x="24" y="24" width="464" height="464" rx="108" ry="108" fill="url(#termBg)"/>
 
     <!-- Top Window Titlebar -->
-    <rect x="24" y="24" width="464" height="68" fill="url(#headerGrad)"/>
+    <path d="M 24,92 L 24,132 A 108,108 0 0,1 132,24 L 380,24 A 108,108 0 0,1 488,132 L 488,92 Z" fill="url(#headerGrad)"/>
     <line x1="24" y1="92" x2="488" y2="92" stroke="#1c1c1e" stroke-width="2"/>
 
     <!-- Traffic Lights on Titlebar -->

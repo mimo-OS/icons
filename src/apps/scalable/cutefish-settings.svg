@@ -41,7 +41,7 @@
 
   <!-- Clipped Background -->
   <g clip-path="url(#squircleClip)">
-    <rect x="24" y="24" width="464" height="464" fill="url(#squircleBg)"/>
+    <rect x="24" y="24" width="464" height="464" rx="108" ry="108" fill="url(#squircleBg)"/>
 
     <!-- Subtle Diagonal Background Texture Lines -->
     <path d="M 24 160 L 360 488 M 24 280 L 240 488 M 160 24 L 488 352" stroke="#FFFFFF" stroke-width="2" opacity="0.4"/>

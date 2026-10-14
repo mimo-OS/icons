@@ -37,7 +37,7 @@
 
   <!-- Clipped Background -->
   <g clip-path="url(#squircleClip)">
-    <rect x="24" y="24" width="464" height="464" fill="url(#squircleBg)"/>
+    <rect x="24" y="24" width="464" height="464" rx="108" ry="108" fill="url(#squircleBg)"/>
 
     <!-- Central Precision Gear -->
     <g transform="translate(256, 256)">
