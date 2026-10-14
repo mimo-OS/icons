@@ -250,6 +250,10 @@ _cutefish_create_symlink(
 _cutefish_create_scaled_links("${_cutefish_base}")
 _cutefish_create_scaled_links("${_cutefish_dark}")
 
+_cutefish_create_symlink("${_cutefish_theme_name}" "${_cutefish_install_root}/mimo")
+_cutefish_create_symlink("${_cutefish_theme_name}-Light" "${_cutefish_install_root}/mimo-Light")
+_cutefish_create_symlink("${_cutefish_theme_name}-Dark" "${_cutefish_install_root}/mimo-Dark")
+
 foreach(_theme_dir IN ITEMS _cutefish_base _cutefish_light _cutefish_dark)
   _cutefish_update_cache("${${_theme_dir}}")
 endforeach()
